@@ -1,0 +1,94 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  align-items: center;
+  grid-gap: 1em;
+  width: 80%;
+  
+}
+
+.kattcha {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-size: 80px;
+  filter: drop-shadow(5px 5px 5px black);
+}
+
+.vald {
+  border: 2px solid red;
+}
+
+#kattcha1 {
+  background-image: url("./img/bild1.jpg");
+}
+#kattcha2 {
+  background-image: url("./img/bild2.jpg");
+}
+#kattcha3 {
+  background-image: url("./img/bild3.jpg");
+}
+#kattcha4 {
+  background-image: url("./img/bild4.jpg");
+}
+#kattcha5 {
+  background-image: url("./img/bild5.jpg");
+}
+#kattcha6 {
+  background-image: url("./img/bild6.jpg");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 2em;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 600px){
+  .kattcha{
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+  }
+
+  section{
+    grid-gap: 1em;
+    width: 70%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .kattcha {
+    width: 250px;
+    height: 250px;
+    background-size: 250px;
+  }
+
+  section {
+    grid-gap: 20px;
+    width: 50%;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .kattcha {
+    width: 250px;
+    height: 250px;
+    background-size: 250px;
+  }
+
+  section {
+    grid-gap: 20px;
+    width: 750px;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
